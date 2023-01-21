@@ -43,30 +43,30 @@ function App() {
       <div>
         <StoreProvider>
           <Nav />
-          <Switch>
-            <Route exact
-              path="/" 
-              element={<Home />} 
-            />
+          <Switch>  
             <Route 
+              path="/" exact
+              component={Home} 
+            />
+             <Route 
               path="/login" 
-              element={<Login />}
+              component={Login}
             />
             <Route 
               path="/signup" 
-              element={<Signup />} 
+              component={Signup} 
             />
             <Route 
               path="/orderHistory" 
-              element={<OrderHistory />} 
+              component={OrderHistory} 
             />
             <Route 
               path="/products/:id" 
-              element={<Detail />}
+              component={Detail}
             />
             <Route 
               path="*" 
-              element={<NoMatch />}
+              component={NoMatch}
             />
           </Switch>
         </StoreProvider>
