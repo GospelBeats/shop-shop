@@ -38,41 +38,41 @@ const client = new ApolloClient({
 
 function App() {
   return (
-      <ApolloProvider client={client}>
-        <Router>
-          <div>
-            <StoreProvider>
-              <Nav />
-              <Switch>
-                <Route 
-                  path="/" 
-                  element={<Home />} 
-                />
-                <Route 
-                  path="/login" 
-                  element={<Login />}
-                />
-                <Route 
-                  path="/signup" 
-                  element={<Signup />} 
-                />
-                <Route 
-                  path="/orderHistory" 
-                  element={<OrderHistory />} 
-                />
-                <Route 
-                  path="/products/:id" 
-                  element={<Detail />}
-                />
-                <Route 
-                  path="*" 
-                  element={<NoMatch />}
-                />
-              </Switch>
-            </StoreProvider>
-          </div>
-        </Router>
-      </ApolloProvider>
+    <ApolloProvider client={client}>
+    <Router>
+      <div>
+        <StoreProvider>
+          <Nav />
+          <Switch>
+            <Route exact
+              path="/" 
+              element={<Home />} 
+            />
+            <Route 
+              path="/login" 
+              element={<Login />}
+            />
+            <Route 
+              path="/signup" 
+              element={<Signup />} 
+            />
+            <Route 
+              path="/orderHistory" 
+              element={<OrderHistory />} 
+            />
+            <Route 
+              path="/products/:id" 
+              element={<Detail />}
+            />
+            <Route 
+              path="*" 
+              element={<NoMatch />}
+            />
+          </Switch>
+        </StoreProvider>
+      </div>
+    </Router>
+  </ApolloProvider>
     );
 }
 
