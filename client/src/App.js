@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
+import Success from './pages/Success';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
@@ -64,6 +64,10 @@ function App() {
               path="/products/:id" 
               component={Detail}
             />
+            <Route
+              path="/success"
+              element={<Success />}
+              />
             <Route 
               path="*" 
               component={NoMatch}
